@@ -1,0 +1,36 @@
+/* SIDEBAR */
+.sidebar {
+  height: 100%;
+  position: fixed;
+  width: 25%;
+  border-right: 1px solid #000000;
+  margin: 0px;
+  padding: 30px;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #D86356;
+}
+
+.sidebar a:hover {
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  display: block;
+  text-decoration: underline;
+}
+
+
+
+
