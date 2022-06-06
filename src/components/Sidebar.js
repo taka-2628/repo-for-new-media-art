@@ -1,7 +1,8 @@
 import React from "react";
 
-import NavBar
- from "./NavBar";
+import NavBar from "./NavBar";
+import Filter from "./Filter";
+
 function Sidebar(){
   return (
     <div className="sidebar">
@@ -9,6 +10,7 @@ function Sidebar(){
       <hr></hr>
       <NavBar />
       <hr></hr>
+      <Filter />
     </div>
   )
 }
