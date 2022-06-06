@@ -1,9 +1,9 @@
 /* SIDEBAR */
 .sidebar {
-  height: 100%;
+  height: 100vh;
   position: fixed;
   width: 25%;
-  border-right: 1px solid #000000;
+  border-right: 1px solid #D86356;
   margin: 0px;
   padding: 30px;
 }
@@ -13,20 +13,26 @@
   font-size: 3em;
 }
 
-.sidebar a {
+.sidebar hr {
+  border-top: 1px solid #D86356;
+  margin: 20px 0;
+}
+
+nav a {
   display: block;
   text-decoration: none;
   font-size: 1.5em;
   color: #D86356;
+  padding: 5px 0;
 }
 
-.sidebar a:hover {
+nav a:hover {
   display: block;
   font-style: italic;
   text-decoration: none;
 }
 
-.sidebar a.active {
+nav a.active {
   display: block;
   text-decoration: underline;
 }
@@ -45,17 +51,32 @@
   .sidebar h1{
     font-size: 1.75em;
   }
+  nav a {
+    font-size: 1.25em;
+  }
 }
-
 @media (max-width: 768px) {
   .sidebar h1{
     font-size: 1.25em;
+  }
+  nav a {
+    font-size: 1em;
   }
 }
 @media (max-width: 480px) {
   .sidebar h1{
     font-size: 1em;
   }
+  nav a {
+    font-size: 0.75em;
+  }
 }
-
+@media (max-width: 350px) {
+  .sidebar h1{
+    font-size: 0.75em;
+  }
+  nav a {
+    font-size: 0.75em;
+  }
+}
 
