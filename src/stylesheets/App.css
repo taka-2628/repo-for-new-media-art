@@ -5,7 +5,7 @@
   width: 25%;
   border-right: 1px solid #D86356;
   margin: 0px;
-  padding: 30px;
+  padding: 25px;
 }
 
 .sidebar h1 {
@@ -37,10 +37,91 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* FILTER */
 #filter h3 {
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
+ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 550;
+	display: block;
+	margin: 0;
+  cursor: pointer;
+  color: #D86356;
+}
+p {
+	color: #D86356;
+	font-size: 15px;
+	position: relative;
+	overflow: hidden;
+	opacity: 1;
+	transform: translate(0, 0);
+	margin-top: 14px;
+	z-index: 2;
+}
+
+ul li .arrow {
+	position: absolute;
+	transform: translate(-6px, 0);
+	margin-top: 16px;
+	right: 0;
+}
+ul li .arrow:before, ul li .arrow:after {
+	content: "";
+	position: absolute;
+	background-color: #D86356;
+	width: 3px;
+	height: 9px;
+}
+ul li .arrow:before {
+	transform: translate(-2px, 0) rotate(45deg);
+}
+ul li .arrow:after {
+	transform: translate(2px, 0) rotate(-45deg);
+}
+ul li input[type=checkbox] {
+	position: absolute;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+  z-index: 1;    
+  opacity: 0;
+}
+ul li input[type=checkbox]:checked ~ p {
+	margin-top: 0;
+	max-height: 0;
+	opacity: 0;
+	transform: translate(0, 50%);
+}
+ul li input[type=checkbox]:checked ~ .arrow:before {
+	transform: translate(2px, 0) rotate(45deg);
+}
+ul li input[type=checkbox]:checked ~ .arrow:after {
+	transform: translate(-2px, 0) rotate(-45deg);
+}
+.transition, p, ul li .arrow:before, ul li .arrow:after {
+	transition: all 0.25s ease-in-out;
+}
+.no-select, h4 {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 1440px) {
   .sidebar h1{
     font-size: 2.5em;
