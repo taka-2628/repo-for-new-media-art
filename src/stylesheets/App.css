@@ -10,7 +10,7 @@
 
 .sidebar h1 {
   margin: 0;
-  font-size: 2.75em;
+  font-size: 2.85em;
 }
 
 .sidebar hr {
@@ -76,7 +76,7 @@ p {
 ul li .arrow {
 	position: absolute;
 	margin-top: 0.5em;
-	right: 0;
+	right: 0.5em;
 }
 ul li .arrow:before, ul li .arrow:after {
 	content: "";
@@ -124,10 +124,10 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 /* MEDIA QUERIES */
 @media (max-width: 1440px) {
   .sidebar h1{
-    font-size: 2.10em;
+    font-size: 2.25em;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .sidebar h1{
     font-size: 1.85em;
   }
@@ -151,22 +151,26 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 }
 @media (max-width: 768px) {
   .sidebar h1{
-    font-size: 1.25em;
+    font-size: 1em;
   }
   nav a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #filter h3 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #filter h4 {
-    font-size: 0.7em;
+    font-size: 0.85em;
   }
   #filter .arrow {
     margin-top: 0.35em;
   }
 }
 @media (max-width: 480px) {
+  .sidebar {
+    width: calc(30% - 30px);
+    padding: 15px;
+  }
   .sidebar h1{
     font-size: 0.8em;
   }
@@ -183,15 +187,15 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
     margin-top: 0.3em;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 390px) {
   .sidebar h1{
-    font-size: 0.75em;
+    font-size: 0.6em;
   }
   nav a {
-    font-size: 0.75em;
+    font-size: 0.5em;
   }
   #filter h3 {
-    font-size: 0.75em;
+    font-size: 0.5em;
   }
 }
 
