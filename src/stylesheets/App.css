@@ -2,7 +2,7 @@
 .sidebar {
   height: 100vh;
   position: fixed;
-  width: 25%;
+  width: calc(25% - 50px);
   border-right: 1px solid #D86356;
   margin: 0px;
   padding: 25px;
@@ -10,7 +10,7 @@
 
 .sidebar h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2.75em;
 }
 
 .sidebar hr {
@@ -55,7 +55,7 @@ ul li {
 }
 
 h4 {
-	font-size: 18px;
+	font-size: 1em;
 	font-weight: 550;
 	display: block;
 	margin: 0;
@@ -75,8 +75,7 @@ p {
 
 ul li .arrow {
 	position: absolute;
-	transform: translate(-6px, 0);
-	margin-top: 16px;
+	margin-top: 0.5em;
 	right: 0;
 }
 ul li .arrow:before, ul li .arrow:after {
@@ -121,26 +120,33 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
 	user-select: none;
 }
 
+
 /* MEDIA QUERIES */
 @media (max-width: 1440px) {
   .sidebar h1{
-    font-size: 2.5em;
+    font-size: 2.10em;
   }
 }
 @media (max-width: 1300px) {
   .sidebar h1{
-    font-size: 2em;
+    font-size: 1.85em;
+  }
+  nav a {
+    font-size: 1.35em;
+  }
+  #filter h3 {
+    font-size: 1.35em;
   }
 }
 @media (max-width: 1024px) {
   .sidebar h1{
-    font-size: 1.75em;
+    font-size: 1.50em;
   }
   nav a {
-    font-size: 1.25em;
+    font-size: 1.20em;
   }
   #filter h3 {
-    font-size: 1.25em;
+    font-size: 1.20em;
   }
 }
 @media (max-width: 768px) {
@@ -153,19 +159,31 @@ ul li input[type=checkbox]:checked ~ .arrow:after {
   #filter h3 {
     font-size: 1em;
   }
+  #filter h4 {
+    font-size: 0.7em;
+  }
+  #filter .arrow {
+    margin-top: 0.35em;
+  }
 }
 @media (max-width: 480px) {
   .sidebar h1{
-    font-size: 1em;
+    font-size: 0.8em;
   }
   nav a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #filter h3 {
-    font-size: 0.75em;
+    font-size: 0.7em;
+  }
+  #filter h4 {
+    font-size: 0.6em;
+  }
+  #filter .arrow {
+    margin-top: 0.3em;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .sidebar h1{
     font-size: 0.75em;
   }
