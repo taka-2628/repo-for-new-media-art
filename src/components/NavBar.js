@@ -7,24 +7,28 @@ function NavBar(){
       <NavLink
         to="/"
         exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
       >
         Home
       </NavLink>
       <NavLink
         to="/about"
         exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
       >
         About
       </NavLink>
       <NavLink    
         to="/my-page"
         exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
       >
         My Page
       </NavLink>
       <NavLink    
         to="/submit"
         exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
       >
         Submit
       </NavLink>

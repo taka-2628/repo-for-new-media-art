@@ -27,14 +27,16 @@ nav a {
 }
 
 nav a:hover {
-  display: block;
   font-style: italic;
   text-decoration: none;
 }
 
-nav a.active {
-  display: block;
+.active-link {
   text-decoration: underline;
+}
+
+.nonactive-link {
+  text-decoration: none;
 }
 
 /* FILTER */
