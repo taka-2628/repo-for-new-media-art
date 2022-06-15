@@ -1,0 +1,56 @@
+#grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #D86356;
+}
+
+.project-container {
+  margin: 1rem;
+  width: calc(33.333% - 2rem - 2pt);
+  border: 1px solid #D86356;
+  background-color: rgba(216,99,86, 0.1);
+  text-align: center;
+}
+.web-gif {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.work-description {
+  text-align: left;
+  margin: 0 5%;
+}
+
+.web-project-link:link {
+  color: #D86356;
+  text-decoration: none;
+}
+
+.web-project-link:visited {
+  color: #D86356;
+  text-decoration: none;
+}
+
+.web-project-link:hover {
+  color: #D86356;
+  text-decoration: underline;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.website-logo {
+  width: 1rem;
+  vertical-align: -15%;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.website-logo-wrapper a {
+  color: #D86356;
+}

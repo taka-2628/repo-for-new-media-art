@@ -5,15 +5,18 @@ import Sidebar from './Sidebar';
 import Grid from './Grid';
 import Project from './Project';
 
+import { web } from '../datatemp/data';
+
 function App() {
   return (
     <>
       <Sidebar />
-
-      <Routes>
-        <Route exact path="/" element={<Grid/>}/>
-        <Route exact path="/project" element={<Project/>}/>
-      </Routes>
+      <main>
+        <Routes>
+          <Route exact path="/" element={<Grid data={web} />}/>
+          <Route path="/project" element={<Project />}/>
+        </Routes>
+      </main>
     </>
 
   );
