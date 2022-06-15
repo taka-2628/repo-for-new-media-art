@@ -1,6 +1,11 @@
 import React from "react";
 
-function Filter(){
+function Filter( { genres } ){
+  console.log(genres)
+  const genreList = genres.map((genre) => {
+    return <p key={genre} className="genre-item">{genre}</p>
+  })
+
   return (
     <div id="filter">
       <h3>Filter</h3>
@@ -9,7 +14,7 @@ function Filter(){
           <input type="checkbox" defaultChecked/>
           <i className="arrow"></i>
           <h4>genre</h4>
-          <p>This UI was written in HTML and CSS.</p>
+          {genreList}
         </li>
         <li>
           <input type="checkbox" defaultChecked/>

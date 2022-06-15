@@ -44,6 +44,10 @@
   margin-bottom: 15px;
 }
 
+.project-detail {
+  margin: 12px 0 12px 0;
+}
+
 .website-logo {
   width: 1rem;
   vertical-align: -15%;

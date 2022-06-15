@@ -77,8 +77,8 @@ p {
 	overflow: hidden;
 	opacity: 1;
 	transform: translate(0, 0);
-	margin-top: 14px;
 	z-index: 2;
+  margin: 4px 0 4px 10px;
 }
 
 ul li .arrow {
