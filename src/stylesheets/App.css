@@ -1,17 +1,21 @@
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
 /* MAIN */
 main {
   margin-left: 25%;
-  padding: 25px;
+  /*padding: 25px;*/
 }
 
 /* SIDEBAR */
 .sidebar {
   height: 100vh;
+  width: calc(25% - 50px - 1px);
   position: fixed;
-  width: calc(25% - 50px);
-  border-right: 1px solid #D86356;
   margin: 0px;
   padding: 25px;
+  border-right: 1px solid #D86356;
 }
 
 .sidebar h1 {

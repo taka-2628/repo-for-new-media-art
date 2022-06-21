@@ -1,7 +1,7 @@
 import React from "react";
 
 function Filter( { genres } ){
-  console.log(genres)
+  
   const genreList = genres.map((genre) => {
     return <p key={genre} className="genre-item">{genre}</p>
   })

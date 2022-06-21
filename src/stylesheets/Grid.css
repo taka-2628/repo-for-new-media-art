@@ -1,11 +1,12 @@
 #grid {
-  width: 100%;
+  width: calc(100% - 50px);
+  padding: 25px;
   display: flex;
   flex-wrap: wrap;
   color: #D86356;
 }
 
-.project-container {
+.card {
   margin: 1rem;
   width: calc(33.333% - 2rem - 2pt);
   border: 1px solid #D86356;

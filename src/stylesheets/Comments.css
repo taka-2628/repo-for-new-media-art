@@ -1,0 +1,7 @@
+
+#comment-section {
+  width: calc(33.33% - 50px);
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: #D86356;
+}

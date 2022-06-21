@@ -26,7 +26,7 @@ function NavBar(){
         My Page
       </NavLink>
       <NavLink    
-        to="/submit"
+        to="/submit-your-art"
         exact="true"
         className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
       >

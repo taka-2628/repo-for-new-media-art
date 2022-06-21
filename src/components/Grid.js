@@ -1,23 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../stylesheets/Grid.css";
 
 import mediumLogo from "../assets/medium-logo_black.png";
 import githubLogo from "../assets/github-logo_black.png";
 
-function Grid({data} ){
-  console.log(data)
+function Grid({ data, setSelectedProject } ){
+
+  function handleClick(project){
+    setSelectedProject(project)
+  }
+
+  function hyphenateTitle(title){
+    return title.replace(/\s/g, "-").toLowerCase();
+  }
 
   const webProjects = data.map((project) => {
+    const url = hyphenateTitle(project.title)
+    
     return (
-      <div key={project.title} className="project-container">
-        <a href="/project">
-          <img className="web-gif" src={project.image} alt={project.title}></img>
-        </a>
+      <div key={project.title} className="card">
+
+          <Link 
+            to={{
+            pathname: "/project",
+            hash: `#${url}`,
+            }}
+            onClick={() => handleClick(project)}
+          >
+            <img className="web-gif" src={project.image} alt={project.title}></img>
+          </Link>
+        
+        
 
         <div className="work-description">
-          <a href="/project" className="web-project-link">
+          <Link 
+            to={{
+              pathname: "/project",
+              hash: `#${url}`,
+            }}
+            className="web-project-link" 
+            onClick={() => handleClick(project)}
+          >
             <h2 className="title">{project.title}</h2>
-          </a>
+          </Link>
           <i className="subtitle">{project.subtitle}</i>
           <p className="project-detail">
             <span className="website-logo-wrapper">
