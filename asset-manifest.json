@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/repository-for-new-media-art/static/css/main.eb8ac315.css",
-    "main.js": "/repository-for-new-media-art/static/js/main.08842af0.js",
+    "main.css": "/repository-for-new-media-art/static/css/main.7912cc15.css",
+    "main.js": "/repository-for-new-media-art/static/js/main.41b6b003.js",
     "static/js/787.d13ed36b.chunk.js": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js",
     "static/media/04-American-Petroleumscape.gif": "/repository-for-new-media-art/static/media/04-American-Petroleumscape.78f47302ef90df4d5ac5.gif",
     "static/media/03-Baboon-Interactive-Model.gif": "/repository-for-new-media-art/static/media/03-Baboon-Interactive-Model.9194ad4f1ee7026b86ae.gif",
@@ -9,12 +9,12 @@
     "static/media/02-52711-Actors.gif": "/repository-for-new-media-art/static/media/02-52711-Actors.3c02d7ba44ac2c4cee99.gif",
     "static/media/01-BUNDLE.gif": "/repository-for-new-media-art/static/media/01-BUNDLE.c86945cc0ac26bb314fd.gif",
     "index.html": "/repository-for-new-media-art/index.html",
-    "main.eb8ac315.css.map": "/repository-for-new-media-art/static/css/main.eb8ac315.css.map",
-    "main.08842af0.js.map": "/repository-for-new-media-art/static/js/main.08842af0.js.map",
+    "main.7912cc15.css.map": "/repository-for-new-media-art/static/css/main.7912cc15.css.map",
+    "main.41b6b003.js.map": "/repository-for-new-media-art/static/js/main.41b6b003.js.map",
     "787.d13ed36b.chunk.js.map": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb8ac315.css",
-    "static/js/main.08842af0.js"
+    "static/css/main.7912cc15.css",
+    "static/js/main.41b6b003.js"
   ]
 }
