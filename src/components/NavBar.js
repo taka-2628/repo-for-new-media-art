@@ -11,6 +11,7 @@ function NavBar(){
       >
         Home
       </NavLink>
+      {/*
       <NavLink
         to="/about"
         exact="true"
@@ -18,6 +19,7 @@ function NavBar(){
       >
         About
       </NavLink>
+      */}
       <NavLink    
         to="/my-page"
         exact="true"
