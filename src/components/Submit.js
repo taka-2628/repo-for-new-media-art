@@ -1,29 +1,28 @@
 import React from "react";
 import "../stylesheets/Submit.css";
 
-function Submit( { genres } ) {
-
+function Submit( { genres } ) {  
   const genreChoices = genres.map((genre) => {
     return (
-        <div key={genre}>
-          <input type="checkbox" name="genre" value={genre}/><span>{genre}</span><br></br>
+        <div key={genre.id}>
+          <input type="checkbox" name="genre" value={genre.genre}/><span>{genre.genre}</span><br></br>
         </div>
     )
   })
-
+  
   return (
     <div id="upload-project">
       <h1>Upload Your Project</h1>
       <form>
         <hr/>
-        
+
         <div className="i-block">
-          <label htmlFor="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Your username.." required/>
         </div>
         <div className="i-block">
-          <label htmlFor="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+          <label htmlFor="altname">Your Name</label>
+          <input type="text" id="altname" name="altname" placeholder="Your name.."/>
         </div>
         
         <hr/>
