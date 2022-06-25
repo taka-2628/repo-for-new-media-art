@@ -16,7 +16,7 @@ const web = [
     school: "Columbia University",
     year: 2022,
     url: "https://taka-2628.github.io/NoMoreMonkeyBusiness",
-    github: "https://github.com/taka-2628/NoMoreMonkeyBusiness",
+    github_url: "https://github.com/taka-2628/NoMoreMonkeyBusiness",
     tags: ["web", "data visualization"]
   },
   {
@@ -29,7 +29,7 @@ const web = [
     school: "Columbia University",
     year: 2022,
     url: "https://taka-2628.github.io/coding-for-spatial-practices/project-03/",
-    github: "https://github.com/taka-2628/coding-for-spatial-practices/project-03/",
+    github_url: "https://github.com/taka-2628/coding-for-spatial-practices/project-03/",
     tags: ["web"]
   },
   {
@@ -42,7 +42,7 @@ const web = [
     school: "Flatiron School",
     year: 2021,
     url: "https://taka-2628.github.io/BUNDLE/",
-    github: "https://github.com/taka-2628/BUNDLE",
+    github_url: "https://github.com/taka-2628/BUNDLE",
     tags: ["web"]
   },
   {
@@ -55,7 +55,7 @@ const web = [
     school: "Columbia University",
     year: 2021,
     url: "https://taka-2628.github.io/52711_ACTORS/",
-    github: "https://github.com/taka-2628/52711_ACTORS",
+    github_url: "https://github.com/taka-2628/52711_ACTORS",
   }
 ]
 

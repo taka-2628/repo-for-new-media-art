@@ -3,7 +3,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import Filter from "./Filter";
 
-function Sidebar( { genres } ){
+function Sidebar( { genres, technologies } ){
   return (
     <div className="sidebar">
       <div id="vert-line"></div>
@@ -11,7 +11,7 @@ function Sidebar( { genres } ){
       <hr></hr>
       <NavBar />
       <hr></hr>
-      <Filter genres={genres} />
+      <Filter genres={genres} technologies={technologies} />
     </div>
   )
 }

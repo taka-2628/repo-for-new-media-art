@@ -8,8 +8,8 @@ import githubLogo from "../assets/github-logo_black.png";
 
 function Grid({ data, setSelectedProject } ){
 
-  function handleClick(project){
-    setSelectedProject(project)
+  function handleClick(selectedProject){
+    setSelectedProject(selectedProject)
   }
 
   function hyphenateTitle(title){
@@ -54,8 +54,8 @@ function Grid({ data, setSelectedProject } ){
                 <img className="website-logo" src={mediumLogo}></img>
               </a> : 
               null }
-              {project.github ? 
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
+              {project.github_url ? 
+              <a href={project.github_url} target="_blank" rel="noopener noreferrer">
                 <span>github</span>
                 <img className="website-logo" src={githubLogo}></img>
               </a> : 
