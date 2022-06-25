@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../stylesheets/Grid.css";
 
 import mediumLogo from "../assets/medium-logo_black.png";

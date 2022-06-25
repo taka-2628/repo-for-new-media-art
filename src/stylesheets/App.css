@@ -66,7 +66,7 @@ ul li {
 	margin: 0;
 }
 
-h4 {
+#filter h4 {
 	font-size: 1em;
 	font-weight: 550;
 	display: block;
@@ -74,7 +74,7 @@ h4 {
   cursor: pointer;
   color: #D86356;
 }
-p {
+#filter p {
 	color: #D86356;
 	font-size: 15px;
 	position: relative;
