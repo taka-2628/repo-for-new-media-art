@@ -8,7 +8,7 @@ import Submit from "./Submit";
 import Grid from './Grid';
 import Project from './Project';
 
-import { web } from '../datatemp/data';
+//import { web } from '../datatemp/data';
 /*
 const genres = [
   "virtual art", 

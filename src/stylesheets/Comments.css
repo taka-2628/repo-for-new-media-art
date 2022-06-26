@@ -3,5 +3,86 @@
   width: calc(33.33% - 50px);
   margin-left: 25px;
   margin-right: 25px;
+  color: #D86356;
+}
+
+/* COMMENT LIST */
+#comment-list {
+  height: 90%;
+  border-top: solid 1pt rgba(216,99,86, 0.2);
+  border-left: solid 1pt rgba(216,99,86, 0.2);
+  overflow-y: scroll;
+  background-color: rgba(216,99,86, 0.01);
+}
+/* SCROLLBAR*/
+#comment-list::-webkit-scrollbar {
+  width: 10px;
+}
+#comment-list::-webkit-scrollbar-track {
+  background: rgba(216,99,86, 0.2); 
+}
+#comment-list::-webkit-scrollbar-thumb {
+  background: #D86356; 
+  border-radius: 5px;
+}
+
+#comment-list li {
+  width: 90%;
+  margin: 16px auto;
+  border: solid 1pt #D86356;
+  border-radius: 10px;
+}
+.comment-header {
+  padding: 8px;
+  display: flex;
+}
+.comment-header .user-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+.comment-header span {
+  margin: auto 8px;
+}
+.comment-header span.username {
+  font-size: 0.85em;
+}
+.comment-header span.date {
+  font-size: 0.65em;
+  color: rgba(216,99,86, 0.65)
+}
+
+#comment-list li p {
+  font-size: 0.75em;
+  padding: 0 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* FORM */
+#comment-section form {
+  height: 10%;
+  display: flex;
+}
+#comment-section textarea {
+  margin: 0;
+  padding: 3px;
+  width: 70%;
+  border: 1px solid #D86356;
+  background-color: #E9E8DD;
+  color: #D86356;
+}
+#comment-section textarea:focus {
+  outline: none;
+  border: 2px solid #D86356;
+}
+#comment-section form input[type="submit"] {
+  width: 30%;
+  margin: 0;
   background-color: #D86356;
+  border: none;
+  color: #ffffff;
+}
+#comment-section form input[type="submit"]:hover {
+  background-color: #ca4e40;
 }

@@ -13,6 +13,8 @@ function Project( {selected} ){
     return(<li key={tech.id}>{tech.technology}</li>)
   })
 
+  const comments = selected.comments;
+
   return (
     <div id="project">
       <section id="top-section">
@@ -20,7 +22,7 @@ function Project( {selected} ){
           <img id="img-project" src={selected.image} alt={selected.title}></img>
         </div>
 
-        <Comments />
+        <Comments comments={comments}/>
       </section>
       
       <hr/>

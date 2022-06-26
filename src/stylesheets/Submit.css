@@ -39,7 +39,7 @@
   display: inline-block;
 }
 
-input[type=text], select {
+#upload-project input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #D86356;
@@ -51,7 +51,7 @@ input[type=text], select {
   display: block;
 }
 
-input[type=submit] {
+#upload-project input[type=submit] {
   width: 100%;
   background-color: #D86356;
   color: white;
@@ -62,7 +62,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+#upload-project input[type=submit]:hover {
   background-color: #ca4e40;
 }
 
