@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/Project.css";
 
-import Comments from "./Comments.js";
+import CommentSection from "./CommentSection.js";
 
 import mediumLogo from "../assets/medium-logo_black.png";
 import githubLogo from "../assets/github-logo_black.png";
@@ -21,7 +21,7 @@ function Project( { selected, currentUser, setCurrentUser, users, projects, setP
           <img id="img-project" src={selected.image} alt={selected.title}></img>
         </div>
 
-        <Comments 
+        <CommentSection 
           selected={selected} 
           comments={comments} 
           currentUser={currentUser} 
