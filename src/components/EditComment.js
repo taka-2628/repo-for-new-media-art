@@ -1,10 +1,26 @@
 import React, { useState } from "react";
 
-function EditComment( { body }){
-  const [commentBody, setCommentBody] = useState(body);
+function EditComment( { comment, handleEdit }){
+  const [commentBody, setCommentBody] = useState(comment.body);
+  
+  function handleEditFormSubmit(e, id){
+    e.preventDefault();
 
+    fetch(`http://localhost:9292/comments/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        body: commentBody
+      }),
+    })
+    .then((r) => r.json())
+    .then((updatedComment) => handleEdit(updatedComment));
+  }
+  
   return (
-    <form className="edit-message">
+    <form className="edit-message" onSubmit={(e) => handleEditFormSubmit(e, comment.id)}>
       <textarea
         type="text"
         name="body"

@@ -6,10 +6,9 @@ import anonymousIcon from "../assets/anonymous-user-icon.png";
 import editIcon from "../assets/edit-icon.png";
 import deleteIcon from "../assets/delete-icon.png";
 
-function Comment( { comment, currentUser, onDeleteComment} ){
+function Comment( { comment, currentUser, onDeleteComment, onEditComment} ){
   const [ editOn, setEditOn ] = useState(false);
 
-  /* DELETE COMMENT */
   function handleDelete(id) {   
     fetch(`http://localhost:9292/comments/${id}`, {
       method: "DELETE"
@@ -17,8 +16,10 @@ function Comment( { comment, currentUser, onDeleteComment} ){
     onDeleteComment(id);
   }
 
-  /* EDIT COMMENT */
-  
+  function handleEdit(updatedComment) {
+    onEditComment(updatedComment);
+    setEditOn(false);
+  }
 
   const date = new Date(comment.created_at) // formated_Date - SDK returned date
   const formatedDate = (`${date.getFullYear()}-${date.getMonth() +1 }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
@@ -43,7 +44,7 @@ function Comment( { comment, currentUser, onDeleteComment} ){
       {editDelete}
       { 
         editOn ? 
-        <EditComment body={comment.body}/> :
+        <EditComment comment={comment} handleEdit={handleEdit}/> :
         <p>{comment.body}</p>
       }
       

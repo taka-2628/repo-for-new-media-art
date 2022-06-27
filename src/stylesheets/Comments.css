@@ -24,7 +24,7 @@
   height: 80%
 }
 
-/* SCROLLBAR*/
+/* scrollbar */
 #comment-list::-webkit-scrollbar {
   width: 10px;
 }
