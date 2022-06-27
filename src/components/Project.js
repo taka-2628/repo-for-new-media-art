@@ -22,7 +22,7 @@ function Project( { selected, currentUser, setCurrentUser } ){
           <img id="img-project" src={selected.image} alt={selected.title}></img>
         </div>
 
-        <Comments comments={comments} currentUser={currentUser}/>
+        <Comments comments={comments} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       </section>
       
       <hr/>

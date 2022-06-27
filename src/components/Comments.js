@@ -4,7 +4,7 @@ import "../stylesheets/Comments.css";
 import CommentForm from "./CommentForm";
 import LoginSignup from "./LoginSignup";
 
-function Comments( { comments, currentUser } ){
+function Comments( { comments, currentUser, setCurrentUser } ){
   const [body, setBody] = useState("");
   
   console.log(comments)
@@ -32,7 +32,7 @@ function Comments( { comments, currentUser } ){
           {commentlist}
         </ul>
       </div>
-      {currentUser ? <CommentForm /> : <LoginSignup />}
+      {currentUser ? <CommentForm /> : <LoginSignup setCurrentUser={setCurrentUser} />}
     </div>
   )
 }

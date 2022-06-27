@@ -119,6 +119,8 @@
   font-size: 0.8em;
 }
 .login-signup-container em {
+  margin-left: 0.5em;
+  font-size: 0.8em;
   font-weight: 600;
 }
 .login-signup-container em:hover {
