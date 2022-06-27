@@ -25,8 +25,6 @@ const genres = [
 ]
 */
 function App() {
-  const [ currentUser, setCurrentUser ] = useState(null);
-
   const [ projects, setProjects ] = useState([]);
   const [ users, setUsers ] = useState([]);
   const [ genres, setGenres ] = useState([]);
@@ -47,7 +45,7 @@ function App() {
       const users = data[1];
       const genres = data[2];
       const technologies = data[3];
-
+      
       setProjects(projects);
       setUsers(users);
       setGenres(genres);
@@ -55,20 +53,18 @@ function App() {
     })
   }, []);
 
-  console.log(currentUser);
-  
+  const [ currentUser, setCurrentUser ] = useState(null);
   const [ selected, setSelected ] = useState("");
-  function setSelectedProject(selectedProject){
-    setSelected(selectedProject)
-  }
 
   return (
     <>
       <Sidebar genres={genres} technologies={technologies}/>
       <main>
         <Routes>
-          <Route exact path="/" element={<Grid data={projects} setSelectedProject={setSelectedProject}/>}/>
-          <Route path="/project" element={<Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} />}/>
+          <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
+          <Route path="/project" element={
+            <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
+          }/>
           {/*<Route exact path="/about" element={<About />} />*/}
           <Route exact path="/submit-your-art" element={<Submit genres={genres}/>} />
         </Routes>

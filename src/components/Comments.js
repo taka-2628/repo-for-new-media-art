@@ -4,9 +4,10 @@ import "../stylesheets/Comments.css";
 import CommentForm from "./CommentForm";
 import LoginSignup from "./LoginSignup";
 
-function Comments( { comments, currentUser, setCurrentUser, users } ){
-  const [body, setBody] = useState("");
-  
+import anonymousIcon from "../assets/anonymous-user-icon.png";
+
+function Comments( { selected, comments, currentUser, setCurrentUser, users, projects, setProjects } ){
+
   const commentlist = comments.map((comment) => {
     const date = new Date(comment.created_at) // formated_Date - SDK returned date
     const formatedDate = (`${date.getFullYear()}-${date.getMonth() +1 }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
@@ -14,7 +15,7 @@ function Comments( { comments, currentUser, setCurrentUser, users } ){
     return(
       <li key={comment.id}>
         <div className="comment-header">
-          <img src={comment.user.profile_image} className="user-icon"></img>
+          <img src={comment.user.profile_image ? comment.user.profile_image : anonymousIcon} className="user-icon"></img>
           <span className="username">{comment.user.username}</span>
           <span className="date">{formatedDate}</span>
         </div>
@@ -30,7 +31,11 @@ function Comments( { comments, currentUser, setCurrentUser, users } ){
           {commentlist}
         </ul>
       </div>
-      {currentUser ? <CommentForm /> : <LoginSignup setCurrentUser={setCurrentUser} users={users} />}
+      { 
+        currentUser ? 
+        <CommentForm selected={selected} currentUser={currentUser} comments={comments} projects={projects} setProjects={setProjects}/> : 
+        <LoginSignup setCurrentUser={setCurrentUser} users={users} />
+      }
     </div>
   )
 }

@@ -8,13 +8,19 @@ function LoginSignup( { setCurrentUser, users } ){
 
   function handleLogin(e){
     e.preventDefault();
-    const input = (e.target.children[0].value);
-    findUsernameMatch(users, input)
+    findUsernameMatch(users, loginValue)
   }
   function findUsernameMatch(users, input){
     const match = users.find(user => user.username == input);
     if (match){
-      setCurrentUser(match.username)
+      setCurrentUser(
+        {
+          id: match.id,
+          intro: match.intro,
+          profile_image: match.profile_image,
+          username: match.username
+        }
+      )
     } else {
       const toSignupSpan = document.getElementById("switch-to-signp");
       toSignupSpan.textContent = "Username not found..";
@@ -23,8 +29,7 @@ function LoginSignup( { setCurrentUser, users } ){
   
   function handleSignup(e){
     e.preventDefault();
-    const input = (e.target.children[0].value);
-    testNewUsername(users, input)
+    testNewUsername(users, signupValue)
   }
   function testNewUsername( users, input ){
     const match = users.find(user => user.username == input);

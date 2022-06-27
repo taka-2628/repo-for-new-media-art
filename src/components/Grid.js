@@ -5,10 +5,10 @@ import "../stylesheets/Grid.css";
 import mediumLogo from "../assets/medium-logo_black.png";
 import githubLogo from "../assets/github-logo_black.png";
 
-function Grid({ data, setSelectedProject } ){
+function Grid({ data, setSelected } ){
 
   function handleClick(selectedProject){
-    setSelectedProject(selectedProject)
+    setSelected(selectedProject)
   }
 
   function hyphenateTitle(title){
