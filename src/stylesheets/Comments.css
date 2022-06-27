@@ -81,6 +81,47 @@
   margin-top: 0;
   margin-bottom: 8px;
 }
+/* Comment Edit Form */
+#comment-list ul li form {
+  display: flex;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+#comment-list ul li form textarea {
+  height: 80px;
+  width: 80%;
+  color: #D86356;
+  border: 1px solid #D86356;
+  background-color: #E9E8DD;
+}
+#comment-list ul li form textarea:focus {
+  height: calc(80px - 2px);
+  width: calc(80% -2px);
+  outline: none;
+  border: 2px solid #D86356;
+}
+#comment-list ul li form textarea::-webkit-scrollbar {
+  width: 10px;
+}
+#comment-list ul li form textarea::-webkit-scrollbar-track {
+  background: rgba(216,99,86, 0.2); 
+}
+#comment-list ul li form textarea::-webkit-scrollbar-thumb {
+  background: rgba(216,99,86, 0.65); 
+  border-radius: 5px;
+}
+#comment-list ul li form input[type="submit"] {
+  width: 20%;
+  margin: 0;
+  background-color: #D86356;
+  border: none;
+  color: #ffffff;
+}
+#comment-list ul li form input[type="submit"]:hover {
+  background-color: #ca4e40;
+}
+
 
 /* LOGIN & SIGNUP */
 .login-signup-container{

@@ -5,7 +5,7 @@ function EditComment( { body }){
 
   return (
     <form className="edit-message">
-      <input
+      <textarea
         type="text"
         name="body"
         autoComplete="off"

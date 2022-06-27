@@ -9,7 +9,6 @@ import deleteIcon from "../assets/delete-icon.png";
 function Comment( { comment, currentUser, onDeleteComment} ){
   const [ editOn, setEditOn ] = useState(false);
 
-  console.log(comment)
   /* DELETE COMMENT */
   function handleDelete(id) {   
     fetch(`http://localhost:9292/comments/${id}`, {
@@ -17,6 +16,9 @@ function Comment( { comment, currentUser, onDeleteComment} ){
     });
     onDeleteComment(id);
   }
+
+  /* EDIT COMMENT */
+  
 
   const date = new Date(comment.created_at) // formated_Date - SDK returned date
   const formatedDate = (`${date.getFullYear()}-${date.getMonth() +1 }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)

@@ -70,8 +70,6 @@ function Project( { selected, currentUser, setCurrentUser, users, projects, setP
         </div>
           
       </section>
-      
-
 
     </div>
   )
