@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function LoginSignup( { setCurrentUser } ){
+function LoginSignup( { setCurrentUser, users } ){
   const [ selectedForm, setSelectedForm ] = useState("login");
 
   const [ loginValue, setLoginValue ] = useState("");
@@ -9,10 +9,7 @@ function LoginSignup( { setCurrentUser } ){
   function handleLogin(e){
     e.preventDefault();
     const input = (e.target.children[0].value);
-
-    fetch("http://localhost:9292/users")
-      .then((r) => r.json())
-      .then(users => findUsernameMatch(users, input));
+    findUsernameMatch(users, input)
   }
   function findUsernameMatch(users, input){
     const match = users.find(user => user.username == input);
@@ -23,7 +20,37 @@ function LoginSignup( { setCurrentUser } ){
       toSignupSpan.textContent = "Username not found..";
     }
   }
-    
+  
+  function handleSignup(e){
+    e.preventDefault();
+    const input = (e.target.children[0].value);
+    testNewUsername(users, input)
+  }
+  function testNewUsername( users, input ){
+    const match = users.find(user => user.username == input);
+    if (match){
+      const toLoginSpan = document.getElementById("switch-to-login");
+      toLoginSpan.textContent = "Username already exists..";
+    } else {
+      createNewUsername(input);
+    }
+  }
+  function createNewUsername(input){
+    fetch("http://localhost:9292/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: input,
+        profile_image: "",
+        intro: ""
+      })
+    })
+    .then((r) => r.json())
+    .then((user) => setCurrentUser(user))
+  }
+
   return (
     <>{
       (selectedForm == "login") ? 
@@ -42,7 +69,7 @@ function LoginSignup( { setCurrentUser } ){
       </div> :
       <div id="comment-signup" className="login-signup-container">
         <h5>Create username</h5>
-        <form>
+        <form onSubmit={handleSignup}>
           <input 
             type="text" 
             placeholder="username"
@@ -51,7 +78,7 @@ function LoginSignup( { setCurrentUser } ){
           ></input>
           <input type="submit" value="Sign up"></input>
         </form>
-        <span>Already have a username?</span><em onClick={()=> setSelectedForm("login")} >Log in</em>
+        <span id="switch-to-login">Already have a username?</span><em onClick={()=> setSelectedForm("login")} >Log in</em>
       </div>
     }</>
   )

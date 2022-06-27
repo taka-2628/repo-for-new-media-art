@@ -6,8 +6,7 @@ import Comments from "./Comments.js";
 import mediumLogo from "../assets/medium-logo_black.png";
 import githubLogo from "../assets/github-logo_black.png"
 
-function Project( { selected, currentUser, setCurrentUser } ){
-  console.log(selected)
+function Project( { selected, currentUser, setCurrentUser, users } ){
 
   const techBadges = selected.technologies.map((tech) => {
     return(<li key={tech.id}>{tech.technology}</li>)
@@ -22,7 +21,7 @@ function Project( { selected, currentUser, setCurrentUser } ){
           <img id="img-project" src={selected.image} alt={selected.title}></img>
         </div>
 
-        <Comments comments={comments} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <Comments comments={comments} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} />
       </section>
       
       <hr/>

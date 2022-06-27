@@ -25,14 +25,17 @@ const genres = [
 ]
 */
 function App() {
-  const [ currentUser, setCurrentUser ] = useState(null)
+  const [ currentUser, setCurrentUser ] = useState(null);
+
   const [ projects, setProjects ] = useState([]);
+  const [ users, setUsers ] = useState([]);
   const [ genres, setGenres ] = useState([]);
   const [ technologies, setTechnologies ] = useState([]);
 
   useEffect(() => {
     Promise.all([
       fetch('http://localhost:9292/projects'),
+      fetch('http://localhost:9292/users'),
       fetch('http://localhost:9292/genres'),
       fetch('http://localhost:9292/technologies')
     ]).then(function(responses){
@@ -41,15 +44,19 @@ function App() {
       }))
     }).then(function(data){
       const projects = data[0];
-      const genres = data[1];
-      const technologies = data[2];
+      const users = data[1];
+      const genres = data[2];
+      const technologies = data[3];
 
       setProjects(projects);
+      setUsers(users);
       setGenres(genres);
       setTechnologies(technologies);
     })
   }, []);
 
+  console.log(currentUser);
+  
   const [ selected, setSelected ] = useState("");
   function setSelectedProject(selectedProject){
     setSelected(selectedProject)
@@ -61,7 +68,7 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<Grid data={projects} setSelectedProject={setSelectedProject}/>}/>
-          <Route path="/project" element={<Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+          <Route path="/project" element={<Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} />}/>
           {/*<Route exact path="/about" element={<About />} />*/}
           <Route exact path="/submit-your-art" element={<Submit genres={genres}/>} />
         </Routes>

@@ -4,10 +4,8 @@ import "../stylesheets/Comments.css";
 import CommentForm from "./CommentForm";
 import LoginSignup from "./LoginSignup";
 
-function Comments( { comments, currentUser, setCurrentUser } ){
+function Comments( { comments, currentUser, setCurrentUser, users } ){
   const [body, setBody] = useState("");
-  
-  console.log(comments)
   
   const commentlist = comments.map((comment) => {
     const date = new Date(comment.created_at) // formated_Date - SDK returned date
@@ -32,7 +30,7 @@ function Comments( { comments, currentUser, setCurrentUser } ){
           {commentlist}
         </ul>
       </div>
-      {currentUser ? <CommentForm /> : <LoginSignup setCurrentUser={setCurrentUser} />}
+      {currentUser ? <CommentForm /> : <LoginSignup setCurrentUser={setCurrentUser} users={users} />}
     </div>
   )
 }
