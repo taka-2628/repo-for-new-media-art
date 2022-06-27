@@ -19,7 +19,7 @@ function CommentForm( { selected, currentUser, comments, projects, setProjects }
     })
     .then((r) => r.json())
     .then((comment) => {
-      onAddNewComment(comment)
+      onAddNewComment(comment);
       setCommentBody("");
     });
     function onAddNewComment(comment){
@@ -36,8 +36,6 @@ function CommentForm( { selected, currentUser, comments, projects, setProjects }
       setProjects(updatedProjects);
     }
   }
-
-  
 
   return (
     <form id="comment-form" onSubmit={handleSubmit}>

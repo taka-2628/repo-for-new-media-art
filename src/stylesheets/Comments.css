@@ -61,6 +61,19 @@
   font-size: 0.65em;
   color: rgba(216,99,86, 0.65)
 }
+.edit-delete {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.edit-delete img{
+  margin-left: 6px;
+  height: 15px;
+  width: 15px;
+}
+.edit-delete img:hover {
+  opacity: 0.5;
+}
 
 #comment-list li p {
   font-size: 0.75em;
