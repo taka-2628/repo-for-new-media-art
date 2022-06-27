@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../stylesheets/Comments.css";
 
-function Comments( { comments } ){
+import CommentForm from "./CommentForm";
+import LoginSignup from "./LoginSignup";
+
+function Comments( { comments, currentUser } ){
+  const [body, setBody] = useState("");
+  
   console.log(comments)
   
   const commentlist = comments.map((comment) => {
-
     const date = new Date(comment.created_at) // formated_Date - SDK returned date
     const formatedDate = (`${date.getFullYear()}-${date.getMonth() +1 }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`)
 
@@ -23,20 +27,12 @@ function Comments( { comments } ){
 
   return (
     <div id="comment-section">
-      <div id="comment-list">
+      <div id="comment-list" className={ currentUser ? "h-90" : "h-80" }>
         <ul>
           {commentlist}
         </ul>
       </div>
-      <form>
-        <textarea 
-           type="text"
-           name="body"
-           autoComplete="off"
-        >
-        </textarea>
-        <input type="submit"></input>
-      </form>
+      {currentUser ? <CommentForm /> : <LoginSignup />}
     </div>
   )
 }

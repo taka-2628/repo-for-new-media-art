@@ -6,7 +6,7 @@ import Comments from "./Comments.js";
 import mediumLogo from "../assets/medium-logo_black.png";
 import githubLogo from "../assets/github-logo_black.png"
 
-function Project( {selected} ){
+function Project( { selected, currentUser, setCurrentUser } ){
   console.log(selected)
 
   const techBadges = selected.technologies.map((tech) => {
@@ -22,7 +22,7 @@ function Project( {selected} ){
           <img id="img-project" src={selected.image} alt={selected.title}></img>
         </div>
 
-        <Comments comments={comments}/>
+        <Comments comments={comments} currentUser={currentUser}/>
       </section>
       
       <hr/>

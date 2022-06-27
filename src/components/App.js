@@ -25,6 +25,7 @@ const genres = [
 ]
 */
 function App() {
+  const [ currentUser, setCurrentUser ] = useState(null)
   const [ projects, setProjects ] = useState([]);
   const [ genres, setGenres ] = useState([]);
   const [ technologies, setTechnologies ] = useState([]);
@@ -49,8 +50,6 @@ function App() {
     })
   }, []);
 
-  //console.log(projects);
-
   const [ selected, setSelected ] = useState("");
   function setSelectedProject(selectedProject){
     setSelected(selectedProject)
@@ -62,7 +61,7 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<Grid data={projects} setSelectedProject={setSelectedProject}/>}/>
-          <Route path="/project" element={<Project selected={selected}/>}/>
+          <Route path="/project" element={<Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
           {/*<Route exact path="/about" element={<About />} />*/}
           <Route exact path="/submit-your-art" element={<Submit genres={genres}/>} />
         </Routes>
