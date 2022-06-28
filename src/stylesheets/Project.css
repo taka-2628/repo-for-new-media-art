@@ -68,6 +68,9 @@
 #bottom-left .website-logo-wrapper {
   margin-bottom: 14px;
 }
+#bottom-left ul {
+  padding-left: 0;
+}
 #bottom-left li {
   display: inline-block;
   font-size: 0.75em;

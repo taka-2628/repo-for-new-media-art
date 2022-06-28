@@ -23,8 +23,11 @@
   height: 80%
 }
 #comment-list ul {
+  padding: 0;
+  margin: 0;
   height: 100%;
   overflow-y: scroll;
+  list-style: none;
 }
 /* scrollbar */
 #comment-list ul::-webkit-scrollbar {
@@ -34,7 +37,7 @@
   background: rgba(216,99,86, 0.2); 
 }
 #comment-list ul::-webkit-scrollbar-thumb {
-  background: #D86356; 
+  background: rgba(216,99,86, 0.65); 
   border-radius: 5px;
 }
 

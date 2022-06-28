@@ -6,12 +6,16 @@ import Filter from "./Filter";
 function Sidebar( { genres, technologies } ){
   return (
     <div className="sidebar">
-      <div id="vert-line"></div>
-      <h1>Repostory for New Media Art</h1>
-      <hr></hr>
-      <NavBar />
-      <hr></hr>
-      <Filter genres={genres} technologies={technologies} />
+      <div id="sidebar-top">
+        <h1>Repostory for New Media Art</h1>
+        <hr></hr>
+        <NavBar />
+      </div>
+      
+      <div id="sidebar-bottom">
+        {<Filter genres={genres} technologies={technologies} />}
+      </div>
+      
     </div>
   )
 }

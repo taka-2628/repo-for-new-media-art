@@ -10,14 +10,20 @@ main {
 
 /* SIDEBAR */
 .sidebar {
-  height: 100vh;
-  width: calc(25% - 50px - 1px);
+  height: calc(100vh);
+  width: calc(25% - 1px);
   position: fixed;
   margin: 0px;
-  padding: 25px;
+  /*padding: 25px;*/
   border-right: 1px solid #D86356;
 }
 
+/* SIDEBAR TOP */
+#sidebar-top {
+  height: calc(50% - 25px - 1px);
+  padding: 25px 25px 0 25px;
+  border-bottom: 1px solid #D86356;
+}
 .sidebar h1 {
   margin: 0;
   font-size: 2.85em;
@@ -49,21 +55,50 @@ nav a:hover {
   text-decoration: none;
 }
 
+/* SIDEBAR BOTTOM*/
+#sidebar-bottom {
+  height: calc(50% - 50px);
+  padding: 25px 25px 25px 25px;
+}
+
 /* FILTER */
+#filter {
+  height: 100%;
+}
+
 #filter h3 {
+  height: (10% - 0.5em);
   font-size: 1.5em;
+  margin-top: 0;
   margin-bottom: 0.5em;
 }
 
-ul {
-	list-style: none;
+#filter ul {
+  height: 90%;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
 }
-ul li {
+#filter ul::-webkit-scrollbar {
+  width: 10px;
+}
+#filter ul::-webkit-scrollbar-track {
+  background: rgba(216,99,86, 0.1); 
+}
+#filter ul::-webkit-scrollbar-thumb {
+  background: rgba(216,99,86, 0.65); 
+  border-radius: 5px;
+}
+
+#filter ul li {
 	position: relative;
 	padding: 0;
 	margin: 0;
+}
+#filter ul #tech-filter-cont {
+  margin-top: 10px;
 }
 
 #filter h4 {
@@ -88,7 +123,7 @@ ul li {
 ul li .arrow {
 	position: absolute;
 	margin-top: 0.5em;
-	right: 0.5em;
+	right: 1em;
 }
 ul li .arrow:before, ul li .arrow:after {
 	content: "";
@@ -103,6 +138,7 @@ ul li .arrow:before {
 ul li .arrow:after {
 	transform: translate(2px, 0) rotate(-45deg);
 }
+
 ul li input[type=checkbox] {
 	position: absolute;
 	cursor: pointer;
@@ -111,8 +147,22 @@ ul li input[type=checkbox] {
   z-index: 1;    
   opacity: 0;
 }
+
+#filter h5 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+/* input:checked - when unfolded */
 ul li input[type=checkbox]:checked ~ p {
 	margin-top: 0;
+	max-height: 0;
+	opacity: 0;
+	transform: translate(0, 50%);
+}
+ul li input[type=checkbox]:checked ~ .tech-categories {
+  margin-top: 0;
 	max-height: 0;
 	opacity: 0;
 	transform: translate(0, 50%);

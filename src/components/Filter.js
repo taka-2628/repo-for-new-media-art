@@ -34,30 +34,31 @@ function Filter( { genres, technologies } ){
           <h4>genre</h4>
           {genreList}
         </li>
-        <li>
+
+        <li id="tech-filter-cont">
           <input type="checkbox" defaultChecked/>
           <i className="arrow"></i>
           <h4>technology</h4>
 
-          <div>
+          <div className="tech-categories">
             <input type="checkbox" defaultChecked/>
             <i className="arrow"></i>
             <h5>language</h5>
             {techLangList}
           </div>
-          <div>
+          <div className="tech-categories">
             <input type="checkbox" defaultChecked/>
             <i className="arrow"></i>
             <h5>library/framework</h5>
             {techLibFrameList}
           </div>
-          <div>
+          <div className="tech-categories">
             <input type="checkbox" defaultChecked/>
             <i className="arrow"></i>
             <h5>library/framework</h5>
             {techAppSoftwareList}
           </div>
-          <div>
+          <div className="tech-categories">
             <input type="checkbox" defaultChecked/>
             <i className="arrow"></i>
             <h5>library/framework</h5>

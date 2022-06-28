@@ -20,6 +20,7 @@ function NavBar(){
         About
       </NavLink>
       */}
+      {/*
       <NavLink    
         to="/my-page"
         exact="true"
@@ -27,6 +28,7 @@ function NavBar(){
       >
         My Page
       </NavLink>
+      */}
       <NavLink    
         to="/submit-your-art"
         exact="true"

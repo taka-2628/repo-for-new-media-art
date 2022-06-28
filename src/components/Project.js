@@ -3,8 +3,8 @@ import "../stylesheets/Project.css";
 
 import CommentSection from "./CommentSection.js";
 
-import mediumLogo from "../assets/medium-logo_black.png";
-import githubLogo from "../assets/github-logo_black.png";
+import webLogo from "../assets/website-icon.png";
+import githubLogo from "../assets/github-logo.png";
 
 function Project( { selected, currentUser, setCurrentUser, users, projects, setProjects } ){
 
@@ -42,7 +42,7 @@ function Project( { selected, currentUser, setCurrentUser, users, projects, setP
               {selected.url ? 
               <a href={selected.url} target="_blank" rel="noopener noreferrer"> 
                 <span>website</span>
-                <img className="website-logo" src={mediumLogo}></img>
+                <img className="website-logo" src={webLogo}></img>
               </a> : 
               null }
               {selected.github_url ? 

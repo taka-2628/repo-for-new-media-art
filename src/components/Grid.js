@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/Grid.css";
 
-import mediumLogo from "../assets/medium-logo_black.png";
-import githubLogo from "../assets/github-logo_black.png";
+import webLogo from "../assets/website-icon.png";
+import githubLogo from "../assets/github-logo.png";
 
 function Grid({ data, setSelected } ){
 
@@ -50,7 +50,7 @@ function Grid({ data, setSelected } ){
               {project.url ? 
               <a href={project.url} target="_blank" rel="noopener noreferrer"> 
                 <span>website</span>
-                <img className="website-logo" src={mediumLogo}></img>
+                <img className="website-logo" src={webLogo}></img>
               </a> : 
               null }
               {project.github_url ? 
