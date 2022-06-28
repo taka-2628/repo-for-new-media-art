@@ -14,7 +14,6 @@
   justify-content: flex-end;
   border-top: solid 1pt rgba(216,99,86, 0.2);
   border-left: solid 1pt rgba(216,99,86, 0.2);
-  overflow-y: scroll;
   background-color: rgba(216,99,86, 0.01);
 }
 .h-90 {
@@ -23,15 +22,18 @@
 .h-80 {
   height: 80%
 }
-
+#comment-list ul {
+  height: 100%;
+  overflow-y: scroll;
+}
 /* scrollbar */
-#comment-list::-webkit-scrollbar {
+#comment-list ul::-webkit-scrollbar {
   width: 10px;
 }
-#comment-list::-webkit-scrollbar-track {
+#comment-list ul::-webkit-scrollbar-track {
   background: rgba(216,99,86, 0.2); 
 }
-#comment-list::-webkit-scrollbar-thumb {
+#comment-list ul::-webkit-scrollbar-thumb {
   background: #D86356; 
   border-radius: 5px;
 }

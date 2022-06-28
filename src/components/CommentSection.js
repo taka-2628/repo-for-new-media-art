@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect } from "react";
 import "../stylesheets/Comments.css";
 
 import Comment from "./Comment";
@@ -6,6 +6,13 @@ import LoginSignup from "./LoginSignup";
 import CommentForm from "./CommentForm";
 
 function CommentSection( { selected, comments, currentUser, setCurrentUser, users, projects, setProjects } ){
+
+  /* SCROLLABLE COMMENT LIST - scrolling always starts from bottom */
+  const scrollable = useRef(null);
+  useEffect(() => {
+    const scrollableUl = scrollable.current;
+    scrollableUl.scrollTop = scrollableUl.scrollHeight;
+  }, []);
 
   /* DELETE COMMENT */
   function onDeleteComment(id){
@@ -57,7 +64,7 @@ function CommentSection( { selected, comments, currentUser, setCurrentUser, user
   return (
     <div id="comment-section">
       <div id="comment-list" className={ currentUser ? "h-90" : "h-80" }>
-        <ul>
+        <ul ref={scrollable}>
           {commentlist}
         </ul>
       </div>
