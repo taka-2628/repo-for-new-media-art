@@ -7,7 +7,7 @@ import webLogo from "../assets/website-icon.png";
 import githubLogo from "../assets/github-logo.png";
 
 function Project( { selected, currentUser, setCurrentUser, users, projects, setProjects } ){
-
+  
   const techBadges = selected.technologies.map((tech) => {
     return(<li key={tech.id}>{tech.technology}</li>)
   })
@@ -67,8 +67,21 @@ function Project( { selected, currentUser, setCurrentUser, users, projects, setP
             <span>{selected.user.username}</span>
           </div>
           <p>{selected.user.intro}</p>
+          <div className="website-logo-wrapper">
+              {selected.user.website ? 
+              <a href={selected.user.website} target="_blank" rel="noopener noreferrer"> 
+                <span>website</span>
+                <img className="website-logo" src={webLogo}></img>
+              </a> : 
+              null }
+              {selected.user.github ? 
+              <a href={selected.user.github} target="_blank" rel="noopener noreferrer">
+                <span>github</span>
+                <img className="website-logo" src={githubLogo}></img>
+              </a> : 
+              null }
+          </div>
         </div>
-          
       </section>
 
     </div>
