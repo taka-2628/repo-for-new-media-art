@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/repository-for-new-media-art/static/css/main.38290c09.css",
-    "main.js": "/repository-for-new-media-art/static/js/main.294bbe7e.js",
+    "main.js": "/repository-for-new-media-art/static/js/main.033afc5a.js",
     "static/js/787.d13ed36b.chunk.js": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js",
     "index.html": "/repository-for-new-media-art/index.html",
     "main.38290c09.css.map": "/repository-for-new-media-art/static/css/main.38290c09.css.map",
-    "main.294bbe7e.js.map": "/repository-for-new-media-art/static/js/main.294bbe7e.js.map",
+    "main.033afc5a.js.map": "/repository-for-new-media-art/static/js/main.033afc5a.js.map",
     "787.d13ed36b.chunk.js.map": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38290c09.css",
-    "static/js/main.294bbe7e.js"
+    "static/js/main.033afc5a.js"
   ]
 }
