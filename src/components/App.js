@@ -29,7 +29,7 @@ function App() {
   const [ users, setUsers ] = useState([]);
   const [ genres, setGenres ] = useState([]);
   const [ technologies, setTechnologies ] = useState([]);
-
+  
   useEffect(() => {
     Promise.all([
       fetch('http://localhost:9292/projects'),
