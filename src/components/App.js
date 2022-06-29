@@ -66,7 +66,7 @@ function App() {
             <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
           }/>
           {/*<Route exact path="/about" element={<About />} />*/}
-          <Route exact path="/submit-your-art" element={<Submit genres={genres}/>} />
+          <Route exact path="/submit-your-art" element={<Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users}/>} />
         </Routes>
       </main>
     </>

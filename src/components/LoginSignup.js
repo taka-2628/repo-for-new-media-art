@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function LoginSignup( { setCurrentUser, users } ){
   const [ selectedForm, setSelectedForm ] = useState("login");
@@ -60,7 +60,7 @@ function LoginSignup( { setCurrentUser, users } ){
     <>{
       (selectedForm == "login") ? 
       <div id="comment-login" className="login-signup-container">
-        <h5>Log in to comment</h5>
+        <h5>Log in</h5>
         <form onSubmit={handleLogin}>
           <input 
             type="text" 

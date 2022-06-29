@@ -61,7 +61,7 @@ function Filter( { genres, technologies } ){
           <div className="tech-categories">
             <input type="checkbox" defaultChecked/>
             <i className="arrow"></i>
-            <h5>library/framework</h5>
+            <h5>hardware</h5>
             {techHardwareList}
           </div>
 
