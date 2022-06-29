@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/repository-for-new-media-art/static/css/main.8cea3a44.css",
-    "main.js": "/repository-for-new-media-art/static/js/main.294bbe7e.js",
+    "main.css": "/repository-for-new-media-art/static/css/main.ac0c1c57.css",
+    "main.js": "/repository-for-new-media-art/static/js/main.52ecb561.js",
     "static/js/787.d13ed36b.chunk.js": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js",
     "index.html": "/repository-for-new-media-art/index.html",
-    "main.8cea3a44.css.map": "/repository-for-new-media-art/static/css/main.8cea3a44.css.map",
-    "main.294bbe7e.js.map": "/repository-for-new-media-art/static/js/main.294bbe7e.js.map",
+    "main.ac0c1c57.css.map": "/repository-for-new-media-art/static/css/main.ac0c1c57.css.map",
+    "main.52ecb561.js.map": "/repository-for-new-media-art/static/js/main.52ecb561.js.map",
     "787.d13ed36b.chunk.js.map": "/repository-for-new-media-art/static/js/787.d13ed36b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cea3a44.css",
-    "static/js/main.294bbe7e.js"
+    "static/css/main.ac0c1c57.css",
+    "static/js/main.52ecb561.js"
   ]
 }
