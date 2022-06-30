@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../stylesheets/Comments.css";
 
 import EditComment from "./EditComment";
 

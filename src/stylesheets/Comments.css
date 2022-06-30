@@ -44,6 +44,7 @@
 #comment-list li {
   width: 90%;
   margin: 16px auto;
+  position: relative;
   border: solid 1pt #D86356;
   border-radius: 10px;
 }
