@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Router basename={"/repository-for-new-media-art"}>
+  <Router basename={"/repo-for-new-media-art"}>
     <App />
   </Router>
 );
